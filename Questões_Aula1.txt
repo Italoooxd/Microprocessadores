@@ -1,0 +1,18 @@
+1. R: São sistemas utilizados para realizar uma determinada função
+
+2. O que são sistemas microprocesssados?
+São sistemas encsula
+3. 
+	(a) Para a indústria automotiva;
+    
+	(b) Para eletrodomésticos;
+    
+	(c) Para automação industrial.
+    
+4. 
+   R: ASICs, CIs e FPGAs. A ASISCs são circuitos integrados de aplicação especifica enquanto os 
+    CIs são circuitos que integram diversos componentes eletronicos em um único chip e as FPGAs
+    são circuitos integrados reconfiguraveis onde as conexões são feitas dentro do chip. 
+    
+5. Por que usamos o MSP430 na disciplina, ao invés de outro microcontrolador?
+    
