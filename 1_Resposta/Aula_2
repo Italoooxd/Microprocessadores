@@ -1,1 +1,18 @@
-asd
+1- R:O barramento de endereços onde vai ser buscado a informação e o barramento de dados
+     é por onde a informação vai ser transmitida.
+2- R:A ROM não é volátil logo o conteudo não é perdido quando acaba a energia porém a escrita é lenta.
+     A RAM é volátil logo seu conteudo é perdido quando acaba a energia, mas é mais rápida que a memoria RAM.
+3- R:(a)Na RAM, pois trata-se de um dado que deve ser resetado ou reiniciar a energia.
+     (b)Na ROM, pois o programa precisa ficar armazenado após acabar a energia do microprocessador. 
+4- R:
+5- R:(a)Little-endian :
+      0x0200-CD
+      0x0201-AB
+      0x0202-51
+      0x0203-80
+     (b)Big-endian :
+      0x0200-80
+      0x0201-51
+      0x0202-AB
+      0x0203-CD
+6- R:
