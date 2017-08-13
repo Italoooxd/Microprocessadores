@@ -1,10 +1,12 @@
-1- R:O barramento de endereços onde vai ser buscado a informação e o barramento de dados
+1- R:O barramento de endereços é onde vai ser buscado a informação e o barramento de dados
      é por onde a informação vai ser transmitida.
-2- R:A ROM não é volátil logo o conteudo não é perdido quando acaba a energia porém a escrita é lenta.
-     A RAM é volátil logo seu conteudo é perdido quando acaba a energia, mas é mais rápida que a memoria RAM.
-3- R:(a)Na RAM, pois trata-se de um dado que deve ser resetado ou reiniciar a energia.
+2- R:A ROM não é volátil logo o conteúdo não é perdido quando acaba a energia, porém a escrita é lenta.
+     A RAM é volátil logo seu conteúdo é perdido quando acaba a energia, mas é mais rápida que a memória ROM.
+3- R:(a)Na RAM, pois trata-se de um dado que sempre vai ser gravado quando o programa for inicializado.
      (b)Na ROM, pois o programa precisa ficar armazenado após acabar a energia do microprocessador. 
-4- R:
+4- R:A arquitetura Von Neumann utiliza o mesmo espaço da memória para guardar os dados e as instruções, consequentemente
+     ela processa uma única informação por vez e a arquitetura Harvard separa os locais onde fica armazenado a instrução e os dados,
+     fazendo com que seja possível realizar outra instrução enquanto outra está sendo executada.
 5- R:(a)Little-endian :
       0x0200-CD
       0x0201-AB
@@ -15,4 +17,10 @@
       0x0201-51
       0x0202-AB
       0x0203-CD
-6- R:
+6- R:Ele separa as duas palavras em 16 bits, os 16 menos significativos e os 16 mais significativos, depois ele    
+     realiza a soma entre os 16 menos significativos, carregando a flag carry caso necessário e salva o resultado 
+     em um registrador que será os 16 bits menos significativos do resultado da soma e faz o mesmo procedimento 
+     para os bits mais significativos, com isso o resultado está armazenado em dois registradores distintos um com 
+     os bits mais significativos e outro com os menos significativos.
+
+
