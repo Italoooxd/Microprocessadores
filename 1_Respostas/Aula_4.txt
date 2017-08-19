@@ -1,0 +1,28 @@
+Questões aula 4
+
+2. 
+(a)='f0;
+	clr r4 
+(b) 'g++;
+	inc.w r5
+(c) 'h--;
+	dec.w r6
+(d) 'i+=2
+	incd.w r7
+(e) 'j -=2
+	decd.w r8
+
+3.
+(a)'f*=2
+    
+(b)
+(c)
+(d)
+	
+	MOV 2(R9),R11
+	MOV 0(R9),R12
+	ADD R11,R12
+	MOV R12,4(R9) 
+(e)	
+(f)
+	 	
