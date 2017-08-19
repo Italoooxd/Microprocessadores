@@ -18,6 +18,31 @@ int main(void)
         return a;
 }
 2.
+
+#include "io430.h"
+#define led1 BIT0
+#define led2 BIT1
+#define leds BIT0|BIT1
+int i;
+
+int main( void )
+{
+
+  WDTCTL = WDTPW + WDTHOLD;
+  P1OUT = 0;//Inicia com os leds apagados
+  P1DIR = leds;
+  while(1){//Loop infinito
+    for (i = 0;i < 1000;i++){ //Acende os leds
+      P1OUT = leds;
+    }
+    for (i = 0;i < 1000;i++){ //Apaga os leds
+      P1OUT = 0;
+    }
+  }
+  return 0;
+}
+
+
 3.
 4.
 5.
