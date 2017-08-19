@@ -1,0 +1,24 @@
+
+1.
+#include <msp430g2553.h>
+#define LSnible  (BIT3+BIT2+BIT1+BIT0)//Nible menos significativo
+#define MSnible  (BIT7+BIT6+BIT5+BIT4)//Nible mais significativo
+
+char a;
+
+int main(void)
+{
+	WDTCTL = WDTPW + WDTHOLD;
+        a = BIT0 ;//Para setar o bit menos significativo
+        a = BIT0+BIT1 ;//Para setar os dois bits menos significativo
+        a = ~(BIT2);//Zerar somente o terceiro bit menos significativo
+        a = ~(BIT2 + BIT3);//Zerar somente o terceiro e o quarto bit menos significativo
+        a ^= BIT7;//Inverter somente o bit mais significativo
+        a = (a ^ MSnible) | LSnible;//Inverter somente o nible mais significativo e setar o neble menos sigficativo
+        return a;
+}
+2.
+3.
+4.
+5.
+6.
