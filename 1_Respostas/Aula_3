@@ -44,6 +44,109 @@ int main( void )
 
 
 3.
+
+
+#include "io430.h"
+#define led1 BIT0
+#define led2 BIT1
+#define leds BIT0|BIT1
+#define btn BIT2
+int i;
+
+int main( void )
+{
+  
+  WDTCTL = WDTPW + WDTHOLD;
+  P1DIR = leds;
+  P1OUT = 0;
+  while(1){
+    if(P1DIR&btn == 0){
+    for (i = 0;i < 1000;i++){
+      P1OUT = leds;
+    }
+    for (i = 0;i < 1000;i++){
+      P1OUT = 0;
+    }}
+    else{
+      P1OUT = 0;
+    }}
+  return 0;
+}
+
+
 4.
+int pisca(acende,apaga ){
+    for (i = 0;i < 1000;i++){
+      P1OUT = acende;
+    }
+    for (i = 0;i < 1000;i++){
+      P1OUT = apaga;
+    }
+}
+
 5.
+
+#include "io430.h"
+#define led1 BIT0
+#define led2 BIT1
+#define leds BIT0|BIT1
+int i;
+
+int pisca(acende,apaga ){
+    for (i = 0;i < 1000;i++){
+      P1OUT = acende;
+    }
+    for (i = 0;i < 1000;i++){
+      P1OUT = apaga;
+    }
+}
+
+int main( void )
+{
+
+  WDTCTL = WDTPW + WDTHOLD;
+  P1OUT = 0;//Inicia com os leds apagados
+  P1DIR = leds;
+  while(1){//Loop infinito
+    
+    pisca(leds,0);
+    
+    }
+  }
+  return 0;
+}
+
 6.
+
+#include "io430.h"
+#define led1 BIT0
+#define led2 BIT1
+#define leds BIT0|BIT1
+#define btn BIT2
+int i;
+
+int pisca(acende,apaga ){
+    for (i = 0;i < 1000;i++){
+      P1OUT = acende;
+    }
+    for (i = 0;i < 1000;i++){
+      P1OUT = apaga;
+    }
+}
+
+int main( void )
+{
+  
+  WDTCTL = WDTPW + WDTHOLD;
+  P1DIR = leds;
+  P1OUT = 0;
+  while(1){
+    if(P1DIR&btn == 0)
+    pisca(leds,0);
+    pisca(leds,0);
+    
+    else
+      P1OUT = 0;
+  }
+  return 0;
+}
