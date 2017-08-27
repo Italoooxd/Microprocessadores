@@ -8,5 +8,57 @@
 (d)
   BIC #12,R8
 (e)
-  INV #6556,R9
+  INV #65536,R9
 (f)
+
+2-
+if(i>j) f = g+h+10;
+else f = g-h-10;
+
+ CMP.W R7,R8
+ JGE IF
+ ELSE :
+      MOV.W R5,R4
+      SUB R6,R4
+      SUB #10,R4
+      JMP FIM
+ IF : 
+      MOV.W R5,R4
+      ADD R6,R4
+      ADD #10,R4
+ FIM:
+3-
+
+
+
+4-
+  CLR.W R6
+  JMP FOR
+  FOR:
+    MOV.W R6,R11
+    RLA.W R11
+    MOV.W R6,R9
+    RLA.W R9
+    MOV.W R11, 0X202(R9)
+    INC.W R6
+    CMP.W #100,R6
+    JL FOR
+  FIM:
+5-
+
+  MOV.W #99,R6
+  JMP FOR
+  FOR:
+    MOV.W R6,R11
+    RLA.W R11
+    MOV.W R6,R9
+    RLA.W R9
+    MOV.W R11, 0X202(R9)
+    DEC.W R6
+    TST.W R6
+    JGE FOR
+  FIM:
+
+
+
+
